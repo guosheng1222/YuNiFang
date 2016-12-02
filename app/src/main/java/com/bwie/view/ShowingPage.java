@@ -79,6 +79,7 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
 
 
     protected abstract void onload();
+
     //展示界面
     public void showPage() {
         CommonUtils.runInMainThread(new Runnable() {
@@ -88,6 +89,7 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
             }
         });
     }
+
     /**
      * 在主线程中展示界面
      */
@@ -118,6 +120,7 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
             showingPage_success.setVisibility(currentState == STATE_LOAD_SUCCESS ? View.VISIBLE : View.GONE);
         }
     }
+
     /**
      * 创建请求成功的界面
      *
@@ -133,6 +136,7 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
                 break;
         }
     }
+
     /**
      * 重置
      */
@@ -151,15 +155,16 @@ public abstract class ShowingPage extends FrameLayout implements View.OnClickLis
     /**
      * 枚举类
      */
-    public enum StateType{
+    public enum StateType {
         //请求类型
-        STATE_LOAD_ERROR(3),STATE_LOAD_EMPTY(4),STATE_LOAD_SUCCESS(5);
+        STATE_LOAD_ERROR(3), STATE_LOAD_EMPTY(4), STATE_LOAD_SUCCESS(5);
         private final int currentState;
 
-        StateType(int currentState){
-            this.currentState=currentState;
+        StateType(int currentState) {
+            this.currentState = currentState;
         }
-        public int getCurrentState(){
+
+        public int getCurrentState() {
             return currentState;
         }
     }

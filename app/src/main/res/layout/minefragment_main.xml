@@ -15,22 +15,22 @@
            android:id="@+id/user_icon_no_set"
            android:src="@mipmap/user_icon_no_set"
            android:layout_centerHorizontal="true"
-           android:layout_marginTop="70dp"
-           android:layout_width="100dp"
-           android:layout_height="100dp" />
+           android:layout_marginTop="70px"
+           android:layout_width="100px"
+           android:layout_height="100px" />
         <RelativeLayout
             android:background="#fff"
             android:layout_below="@id/user_icon_no_set"
             android:layout_width="match_parent"
-            android:layout_height="68dp">
+            android:layout_height="68px">
             <Button
                 android:id="@+id/bt_login"
                 android:text="登录"
                 android:textColor="#B7E5FB"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="10px"
                 android:layout_centerInParent="true"
                 android:background="@mipmap/login_btn_bg"
-                android:layout_width="170dp"
+                android:layout_width="170px"
                 android:layout_height="40dip" />
         </RelativeLayout>
     </RelativeLayout>
@@ -38,7 +38,7 @@
         android:background="#fff"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="68dp">
+        android:layout_height="68px">
         <RadioButton
             android:text="待付款"
             android:button="@null"
@@ -89,15 +89,15 @@
         android:background="#fff"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
         <RelativeLayout
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="5dp"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -112,9 +112,9 @@
                 android:textColor="#000"
                 android:text="我的订单"
                 android:layout_toRightOf="@id/iv_icon_1"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -127,15 +127,15 @@
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="17px"
         android:background="#fff"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <RelativeLayout
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="5dp"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -150,9 +150,9 @@
                 android:textColor="#000"
                 android:text="邀请有礼"
                 android:layout_toRightOf="@id/iv_icon_2"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -165,18 +165,18 @@
         </RelativeLayout>
     </LinearLayout>
     <LinearLayout
-        android:paddingLeft="20dp"
+        android:paddingLeft="20px"
         android:background="#fff"
-        android:paddingRight="20dp"
+        android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -191,9 +191,9 @@
                 android:textColor="#000"
                 android:text="刷脸测尺寸"
                 android:layout_toRightOf="@id/iv_icon_3"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -207,15 +207,15 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="17dp"
-        android:paddingLeft="20dp"
+        android:layout_marginTop="17px"
+        android:paddingLeft="20px"
         android:background="#fff"
-        android:paddingRight="20dp"
+        android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -230,9 +230,9 @@
                 android:textColor="#000"
                 android:text="我的现金券"
                 android:layout_toRightOf="@id/iv_icon_4"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -246,18 +246,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:paddingLeft="20dp"
+        android:paddingLeft="20px"
         android:background="#fff"
-        android:paddingRight="20dp"
+        android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -272,9 +272,9 @@
                 android:textColor="#000"
                 android:text="我的抽奖单"
                 android:layout_toRightOf="@id/iv_icon_5"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -288,18 +288,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:paddingLeft="20dp"
+        android:paddingLeft="20px"
         android:background="#fff"
-        android:paddingRight="20dp"
+        android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -314,9 +314,9 @@
                 android:textColor="#000"
                 android:text="我收藏的商品"
                 android:layout_toRightOf="@id/iv_icon_6"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -330,18 +330,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:paddingLeft="20dp"
+        android:paddingLeft="20px"
         android:background="#fff"
-        android:paddingRight="20dp"
+        android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
         <RelativeLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -356,9 +356,9 @@
                 android:textColor="#000"
                 android:text="联系客服"
                 android:layout_toRightOf="@id/iv_icon_7"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15dp"
+                android:textSize="15px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

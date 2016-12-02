@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId)
-                {
+                switch (checkedId) {
                     case R.id.rb_home_page:
                         vp.setCurrentItem(0);
                         break;

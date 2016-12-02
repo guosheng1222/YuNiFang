@@ -7,22 +7,37 @@
     >
 <TextView
     android:textColor="#f00"
-    android:textSize="20dp"
+    android:textSize="20px"
     android:gravity="center"
     android:text="御泥坊VIP商城"
     android:layout_width="match_parent"
-    android:layout_height="55dp" />
+    android:layout_height="55px" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/data"
+           <com.bwie.view.MyRoolViewPager
+               android:id="@+id/myRoolViewPager"
+               android:layout_width="match_parent"
+               android:layout_height="200px"/>
+            <LinearLayout
+                android:paddingRight="20dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:id="@+id/roolView_lin"
+                android:layout_alignBottom="@id/myRoolViewPager"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="40px"/>
+            <GridView
+                android:numColumns="4"
+                android:layout_marginTop="10dp"
+                android:id="@+id/home_grid1"
+                android:layout_below="@id/myRoolViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150px"/>
+        </RelativeLayout>
     </ScrollView>
 </LinearLayout>
