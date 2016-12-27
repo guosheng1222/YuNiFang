@@ -7,7 +7,6 @@ import android.widget.Button;
 import com.bwie.base.BaseFragment;
 import com.bwie.utils.CommonUtils;
 import com.bwie.view.ShowingPage;
-import com.bwie.yunifang.LoginActivity;
 import com.bwie.yunifang.R;
 
 /**
