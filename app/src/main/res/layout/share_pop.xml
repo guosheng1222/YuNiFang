@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10px"
+    android:background="#fff"
+    >
+<TextView
+    android:textColor="#000"
+    android:layout_marginTop="20px"
+    android:gravity="center_horizontal"
+    android:text="选择分享方式"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+<com.zhy.autolayout.AutoLinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<com.zhy.autolayout.AutoLinearLayout
+    android:layout_weight="4"
+    android:layout_marginTop="20px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20px"
+    >
+    <Button
+        android:textColor="#000"
+        android:layout_weight="1"
+        android:textSize="40px"
+        android:text="微信"
+        android:background="#fff"
+        android:drawableTop="@mipmap/share_wxchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="#000"
+        android:layout_weight="1"
+        android:textSize="40px"
+        android:text="朋友圈"
+        android:background="#fff"
+        android:drawableTop="@mipmap/share_wxsession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="#000"
+        android:layout_weight="1"
+        android:textSize="40px"
+        android:text="QQ空间"
+        android:background="#fff"
+        android:drawableTop="@mipmap/share_qzone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:textColor="#000"
+        android:layout_weight="1"
+        android:textSize="40px"
+        android:text="微博"
+        android:background="#fff"
+        android:drawableTop="@mipmap/share_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</com.zhy.autolayout.AutoLinearLayout>
+    <com.zhy.autolayout.AutoLinearLayout
+       android:paddingLeft="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/share_qq"
+            android:textColor="#000"
+            android:text="QQ好友"
+            android:background="#fff"
+            android:drawableTop="@mipmap/share_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#66666666" />
+
+    <Button
+        android:id="@+id/but_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="取消"
+        android:textColor="@color/colorAccent" />
+
+</com.zhy.autolayout.AutoLinearLayout>

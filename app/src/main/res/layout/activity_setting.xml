@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#fff"
+        android:paddingBottom="10px"
+        android:paddingTop="10px">
+        <ImageView
+            android:id="@+id/setting_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="设置"
+            android:textSize="40px" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="20px"
+            android:background="#fff"
+            android:drawableRight="@mipmap/ico_big_right"
+            android:gravity="center_vertical"
+            android:padding="15px"
+            android:text="购物须知" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="2px"
+            android:background="#fff"
+            android:drawableRight="@mipmap/ico_big_right"
+            android:gravity="center_vertical"
+            android:padding="15px"
+            android:text="意见反馈" />
+
+        <RelativeLayout
+            android:id="@+id/clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="#fff"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15px"
+                android:text="清楚缓存" />
+
+            <TextView
+                android:id="@+id/setup_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="15px"
+                android:text="已缓存8.8M" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="15px"
+            android:background="#fff"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15px"
+                android:text="关于我们" />
+
+            <ImageView
+                android:id="@+id/setup_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="15px"
+                android:src="@mipmap/ico_big_right" />
+
+            <ImageView
+                android:layout_width="85px"
+                android:layout_height="85px"
+                android:layout_toLeftOf="@+id/setup_img"
+                android:padding="15px"
+                android:src="@mipmap/about_us_code" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setup_call"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="2px"
+            android:background="#fff"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15px"
+                android:text="拨打电话" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="15px"
+                android:text="400-688-0900"
+                android:textColor="#FA8098" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="15px"
+            android:background="#fff"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15px"
+                android:text="检查更新" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:padding="15px"
+                android:text="已是最新版本"
+                android:textColor="#FA8098" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/back_login"
+            android:visibility="gone"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/selector_shape_login"
+            android:text="退出登录"
+            android:textColor="#fff" />
+    </LinearLayout>
+</LinearLayout>

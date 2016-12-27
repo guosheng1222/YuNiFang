@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/cart_titlerel"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/cart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="购物车"
+            android:textColor="#000"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:text="编辑"
+            android:textColor="#FC6B87"
+            android:textSize="37px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/guangguang_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/shopping_trolley_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/shopping_trolley_empty" />
+
+        <TextView
+            android:id="@+id/kong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="购物车还是空的哦 \n     快去逛逛吧～"
+            android:textColor="#000" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/guangguang"
+            android:layout_width="230px"
+            android:layout_height="80px"
+            android:layout_below="@id/kong"
+            android:layout_marginTop="10px"
+            android:background="@drawable/selector_shape_login"
+            android:text="逛一逛"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cart_rel"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_alignParentBottom="true">
+
+        <CheckBox
+            android:id="@+id/all_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20px"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_check"
+            android:text="   全选"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/state"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10px"
+            android:background="@drawable/selector_shape_login"
+            android:text="结算"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/sum_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="300px"
+            android:text="总计 ¥0.00"
+            android:textColor="#FC6B87"
+            android:textSize="50px" />
+    </RelativeLayout>
+
+    <com.bwie.view.MyListView
+        android:id="@+id/cart_myListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cart_rel"
+        android:layout_below="@id/cart_titlerel"
+        android:layout_marginTop="10px"
+        android:padding="10px" />
+</RelativeLayout>

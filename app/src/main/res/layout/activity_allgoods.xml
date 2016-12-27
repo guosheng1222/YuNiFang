@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bwie.yunifang.AllgoodsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#fff"
+        android:paddingBottom="10px"
+        android:paddingTop="10px">
+        <ImageView
+            android:id="@+id/all_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="全部商品"
+            android:textSize="40px" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="#DCDCDC"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
+    <RadioGroup
+        android:id="@+id/all_rg"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:background="@drawable/shape_all_check"
+            android:textColor="#FC6B87"
+            android:gravity="center"
+            android:text="默认排序"
+            android:textSize="30px"
+            android:button="@null"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100px" />
+        <RadioButton
+            android:background="@drawable/shape_all_normal"
+            android:gravity="center"
+            android:text="价格升序"
+            android:textSize="30px"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_above"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100px" />
+        <RadioButton
+            android:background="@drawable/shape_all_normal"
+            android:gravity="center"
+            android:text="价格降序"
+            android:textSize="30px"
+            android:button="@null"
+            android:drawableRight="@mipmap/good_list_arrows_below"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100px" />
+    </RadioGroup>
+    <com.liaoinstan.springview.widget.SpringView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/all_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.bwie.view.MyGridView
+            android:id="@+id/all_MyGridView"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:padding="10px"
+            android:numColumns="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </ScrollView>
+    </com.liaoinstan.springview.widget.SpringView>
+</LinearLayout>

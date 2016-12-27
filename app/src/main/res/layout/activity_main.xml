@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.bwie.view.NoScrollViewPager
+    <com.bwie.view.LazyViewPager
         android:layout_width="match_parent"
         android:id="@+id/vp_main"
         android:layout_weight="1"
         android:layout_height="0dp" />
+    <LinearLayout
+        android:background="#CFCFCF"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
     <RadioGroup
+        android:background="#fff"
+        android:paddingTop="10px"
         android:id="@+id/rg_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioButton
+            android:background="#fff"
             android:id="@+id/rb_home_page"
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -22,6 +33,7 @@
             android:gravity="center_horizontal"
             android:text="首页"/>
         <RadioButton
+            android:background="#fff"
             android:id="@+id/rb_category"
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -32,6 +44,7 @@
             android:gravity="center_horizontal"
             android:text="分类"/>
         <RadioButton
+            android:background="#fff"
             android:id="@+id/rb_cart"
             android:layout_width="0px"
             android:layout_height="wrap_content"
@@ -42,6 +55,7 @@
             android:gravity="center_horizontal"
             android:text="购物车"/>
         <RadioButton
+            android:background="#fff"
             android:id="@+id/rb_mine"
             android:layout_width="0px"
             android:layout_height="wrap_content"

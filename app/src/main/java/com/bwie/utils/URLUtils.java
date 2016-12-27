@@ -7,6 +7,23 @@ public class URLUtils {
     //    主页面Url
     public static final String homeUrl = "http://m.yunifang.com/yunifang/mobile/home";
     public static final String homeArgs = "random=59676&encode=62d458fefce9c740359873cc19b05188";
+//    二、分类  数据请求地址
+    public static final String cateGoryUrl="http://m.yunifang.com/yunifang/mobile/category/list";
+    public static final String cateGoryArgs="random=9503&encode=e181334d0cd93bf2ec95f3c9f85d1dde";
+//     全部商品
+    public static final String allUrl="http://m.yunifang.com/yunifang/mobile/goods/getall";
+    public static final String allArgs="random=87749&encode=ac6bd45b8f50b626a6843b294af8fed5";
+//     商品详情
+    public static final String infoUrl="http://m.yunifang.com/yunifang/mobile/goods/detail";
+    public static final String infoArgs="random=6716&encode=b02382bd9e457e06e09b68a6a4f26eb4";
+
+//    商品分类
+    public static final String cateUrl="http://m.yunifang.com/yunifang/mobile/category/list";
+    public static final String cateArgs="random=60729&encode=d5f7520dad446ad974110b1b2cb499c8";
+
+//    分类详情
+    public static final String childUrl="http://m.yunifang.com/yunifang/mobile/goods/getall";
+    public static final String childArgs="random=92414&encode=33984fb43bc319ca16f9b7efb4baf895&category_id=";
 
 //    返回数据：json串
 //    ad1--最上边viewPager数据  ad3--0元抽奖活动数据
@@ -63,8 +80,6 @@ public class URLUtils {
 //    商品详情（id）
 //    http://m.yunifang.com/yunifang/mobile/goods/detail?random=6716&encode=b02382bd9e457e06e09b68a6a4f26eb4&id=14
 //
-//    二、分类  数据请求地址
-//    http://m.yunifang.com/yunifang/mobile/category/list?random=9503&encode=e181334d0cd93bf2ec95f3c9f85d1dde
 //
 //    json数据介绍
 //    category--商品分类

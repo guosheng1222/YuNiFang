@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10px"
+    android:layout_marginTop="20px"
+    >
+<TextView
+    android:id="@+id/infolist_item_title"
+    android:layout_centerVertical="true"
+    android:text="双十一狂欢"
+    android:textSize="40px"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/infolist_item_jump"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ico_big_right"
+        android:layout_width="50px"
+        android:layout_height="50px" />
+</RelativeLayout>

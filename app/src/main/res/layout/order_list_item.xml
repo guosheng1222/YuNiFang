@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+        <ImageView
+            android:id="@+id/order_list_image"
+            android:layout_marginLeft="20px"
+            android:layout_width="200px"
+            android:layout_height="200px" />
+        <TextView
+            android:layout_margin="10px"
+            android:layout_alignTop="@id/order_list_image"
+            android:layout_toRightOf="@id/order_list_image"
+            android:id="@+id/order_list_name"
+            android:text="美白嫩肤面膜"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_margin="10px"
+            android:layout_alignBottom="@id/order_list_image"
+            android:layout_toRightOf="@id/order_list_image"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="10px"
+                android:layout_gravity="center_vertical"
+                android:text="¥79.90"
+                android:textColor="#000"
+                android:textSize="30px"
+                android:id="@+id/order_list_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#AFAFAF"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30px"
+                android:id="@+id/order_list_num"
+                android:text="数量:2"
+                android:textSize="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+</RelativeLayout>

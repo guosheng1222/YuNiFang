@@ -4,41 +4,68 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:background="@mipmap/user_center_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="410px" />
        <com.bwie.view.CircleImageView
            android:id="@+id/user_icon_no_set"
            android:src="@mipmap/user_icon_no_set"
            android:layout_centerHorizontal="true"
-           android:layout_marginTop="70px"
-           android:layout_width="100px"
-           android:layout_height="100px" />
+           android:layout_marginTop="100px"
+           android:layout_width="180px"
+           android:layout_height="180px" />
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_margin="20px"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/user_setting"
+            android:layout_width="80px"
+            android:layout_height="80px" />
         <RelativeLayout
+            android:padding="10px"
+            android:layout_marginTop="60px"
             android:background="#fff"
             android:layout_below="@id/user_icon_no_set"
             android:layout_width="match_parent"
-            android:layout_height="68px">
+            android:layout_height="wrap_content">
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/user_name"
+                android:text="stone"
+                android:textSize="40px"
+                android:textColor="#000"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
             <Button
+                android:layout_below="@id/user_name"
                 android:id="@+id/bt_login"
                 android:text="登录"
                 android:textColor="#B7E5FB"
-                android:layout_marginTop="10px"
                 android:layout_centerInParent="true"
                 android:background="@mipmap/login_btn_bg"
-                android:layout_width="170px"
-                android:layout_height="40dip" />
+                android:layout_width="350px"
+                android:layout_height="80px" />
         </RelativeLayout>
     </RelativeLayout>
     <RadioGroup
+        android:id="@+id/mine_rg"
+        android:layout_marginTop="10px"
         android:background="#fff"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="68px">
+        android:layout_height="150px">
         <RadioButton
             android:text="待付款"
             android:button="@null"
@@ -89,18 +116,21 @@
         android:background="#fff"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <LinearLayout
+            android:layout_marginTop="9px"
             android:background="#DCDCDC"
             android:layout_width="match_parent"
             android:layout_height="1dip"></LinearLayout>
+
         <RelativeLayout
+            android:id="@+id/mine_myorder"
             android:paddingLeft="20px"
             android:paddingRight="20px"
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_1"
                 android:layout_centerVertical="true"
@@ -114,7 +144,7 @@
                 android:layout_toRightOf="@id/iv_icon_1"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -131,14 +161,14 @@
         android:background="#fff"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <RelativeLayout
             android:paddingLeft="20px"
             android:paddingRight="20px"
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_2"
                 android:layout_centerVertical="true"
@@ -152,7 +182,7 @@
                 android:layout_toRightOf="@id/iv_icon_2"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -170,7 +200,7 @@
         android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
@@ -179,7 +209,7 @@
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_3"
                 android:layout_centerVertical="true"
@@ -193,7 +223,7 @@
                 android:layout_toRightOf="@id/iv_icon_3"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -213,12 +243,12 @@
         android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <RelativeLayout
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_4"
                 android:layout_centerVertical="true"
@@ -232,7 +262,7 @@
                 android:layout_toRightOf="@id/iv_icon_4"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -251,7 +281,7 @@
         android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
@@ -260,7 +290,7 @@
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_5"
                 android:layout_centerVertical="true"
@@ -274,7 +304,7 @@
                 android:layout_toRightOf="@id/iv_icon_5"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -293,7 +323,7 @@
         android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
@@ -302,7 +332,7 @@
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_6"
                 android:layout_centerVertical="true"
@@ -316,7 +346,7 @@
                 android:layout_toRightOf="@id/iv_icon_6"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -335,7 +365,7 @@
         android:paddingRight="20px"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="50px">
+        android:layout_height="150px">
         <LinearLayout
             android:background="#DCDCDC"
             android:layout_width="match_parent"
@@ -344,7 +374,7 @@
             android:layout_marginTop="5px"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="140px">
             <ImageView
                 android:id="@+id/iv_icon_7"
                 android:layout_centerVertical="true"
@@ -358,7 +388,7 @@
                 android:layout_toRightOf="@id/iv_icon_7"
                 android:layout_marginLeft="20px"
                 android:layout_centerVertical="true"
-                android:textSize="15px"
+                android:textSize="30px"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -370,4 +400,6 @@
                 android:layout_height="wrap_content" />
         </RelativeLayout>
     </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

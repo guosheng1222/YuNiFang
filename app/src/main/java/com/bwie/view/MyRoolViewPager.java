@@ -112,7 +112,17 @@ public class MyRoolViewPager extends ViewPager {
             View view= CommonUtils.inflate(R.layout.roolviewpager_item);
             ImageView image = (ImageView) view.findViewById(R.id.iv_roolimage);
             image.setScaleType(ImageView.ScaleType.FIT_XY);
-            ImageLoader.getInstance().displayImage(imageUrlList.get(position%imageUrlList.size()),image,imageOptios);
+            DisplayImageOptions options = new DisplayImageOptions.Builder()
+                    // 设置图片在下载期间显示的图片
+                    .showImageOnLoading(R.drawable.default_2)
+                    // 设置图片Uri为空或是错误的时候显示的图片
+                    .showImageOnFail(R.drawable.default_2)
+                    // 设置下载的图片是否缓存在内存中
+                    .cacheInMemory(true)
+                    // 设置下载的图片是否缓存在SD卡中
+                    .cacheOnDisc(true)
+                    .build();
+            ImageLoader.getInstance().displayImage(imageUrlList.get(position%imageUrlList.size()),image,options);
             container.addView(view);
             view.setOnTouchListener(new OnTouchListener() {
 
@@ -142,9 +152,6 @@ public class MyRoolViewPager extends ViewPager {
                             break;
                         case MotionEvent.ACTION_MOVE:
                             handler.removeCallbacksAndMessages(null);
-                            break;
-                        case MotionEvent.ACTION_CANCEL:
-                            handler.sendEmptyMessageDelayed(0,2000);
                             break;
                     }
                     return true;

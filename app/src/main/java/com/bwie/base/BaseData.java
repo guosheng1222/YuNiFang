@@ -5,16 +5,20 @@ import android.text.TextUtils;
 import com.bwie.utils.CommonUtils;
 import com.bwie.utils.MD5Encoder;
 import com.bwie.view.ShowingPage;
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
-import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
-import org.xutils.x;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created by PC on 2016/11/29.
@@ -98,7 +102,8 @@ public abstract class BaseData {
     }
 
     private void getDataFromNet(final String path, final String args, final int index, final int validTime) {
-        RequestParams params=new RequestParams(path+"?"+args);
+       /* RequestParams params=new RequestParams(path+"?"+args);
+        LogUtils.i("AAAA","****"+path+"?"+args);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String s) {
@@ -108,6 +113,7 @@ public abstract class BaseData {
 
             @Override
             public void onError(Throwable throwable, boolean b) {
+                LogUtils.i("AAAA","*****加载失败");
                 setResultError(ShowingPage.StateType.STATE_LOAD_ERROR);
             }
 
@@ -120,7 +126,37 @@ public abstract class BaseData {
             public void onFinished() {
 
             }
+        });*/
+        RequestParams requestParams = new RequestParams(path + "?" + args);
+        //创建okHttpClient对象
+        OkHttpClient mOkHttpClient = new OkHttpClient();
+        //创建一个Request
+        final Request request = new Request.Builder()
+                .url(path + "?" + args)
+                .build();
+        //new call
+        Call call = mOkHttpClient.newCall(request);
+        //请求加入调度
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+            }
+
+            @Override
+            public void onResponse(final Response response) throws IOException {
+                final String data = response.body().string();
+                CommonUtils.runInMainThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //设置数据
+                        setResultData(data);
+                    }
+                });
+                //写到本地
+                writeDataToLocal(path, args, index, validTime, data);
+            }
         });
+
     }
     private void writeDataToLocal(String path, String args, int index, int validTime,String data) {
         try {

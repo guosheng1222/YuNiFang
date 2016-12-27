@@ -995,128 +995,8 @@ public class LazyViewPager extends ViewGroup {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        /*
-         * This method JUST determines whether we want to intercept the motion.
-         * If we return true, onMotionEvent will be called and we do the actual
-         * scrolling there.
-         */
-
-        final int action = ev.getAction() & MotionEventCompat.ACTION_MASK;
-
-        // Always take care of the touch gesture being complete.
-        if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
-            // Release the drag.
-            if (DEBUG) Log.v(TAG, "Intercept done!");
-            mIsBeingDragged = false;
-            mIsUnableToDrag = false;
-            mActivePointerId = INVALID_POINTER;
-            return false;
-        }
-
-        // Nothing more to do here if we have decided whether or not we
-        // are dragging.
-        if (action != MotionEvent.ACTION_DOWN) {
-            if (mIsBeingDragged) {
-                if (DEBUG) Log.v(TAG, "Intercept returning true!");
-                return true;
-            }
-            if (mIsUnableToDrag) {
-                if (DEBUG) Log.v(TAG, "Intercept returning false!");
-                return false;
-            }
-        }
-
-        switch (action) {
-            case MotionEvent.ACTION_MOVE: {
-                /*
-                 * mIsBeingDragged == false, otherwise the shortcut would have caught it. Check
-                 * whether the user has moved far enough from his original down touch.
-                 */
-
-                /*
-                * Locally do absolute value. mLastMotionY is set to the y value
-                * of the down event.
-                */
-                final int activePointerId = mActivePointerId;
-                if (activePointerId == INVALID_POINTER) {
-                    // If we don't have a valid id, the touch down wasn't on content.
-                    break;
-                }
-
-                final int pointerIndex = MotionEventCompat.findPointerIndex(ev, activePointerId);
-                final float x = MotionEventCompat.getX(ev, pointerIndex);
-                final float dx = x - mLastMotionX;
-                final float xDiff = Math.abs(dx);
-                final float y = MotionEventCompat.getY(ev, pointerIndex);
-                final float yDiff = Math.abs(y - mLastMotionY);
-                final int scrollX = getScrollX();
-                final boolean atEdge = (dx > 0 && scrollX == 0) || (dx < 0 && mAdapter != null &&
-                        scrollX >= (mAdapter.getCount() - 1) * getWidth() - 1);
-                if (DEBUG) Log.v(TAG, "Moved x to " + x + "," + y + " diff=" + xDiff + "," + yDiff);
-
-                if (canScroll(this, false, (int) dx, (int) x, (int) y)) {
-                    // Nested view has scrollable area under this point. Let it be handled there.
-                    mInitialMotionX = mLastMotionX = x;
-                    mLastMotionY = y;
-                    return false;
-                }
-                if (xDiff > mTouchSlop && xDiff > yDiff) {
-                    if (DEBUG) Log.v(TAG, "Starting drag!");
-                    mIsBeingDragged = true;
-                    setScrollState(SCROLL_STATE_DRAGGING);
-                    mLastMotionX = x;
-                    setScrollingCacheEnabled(true);
-                } else {
-                    if (yDiff > mTouchSlop) {
-                        // The finger has moved enough in the vertical
-                        // direction to be counted as a drag...  abort
-                        // any attempt to drag horizontally, to work correctly
-                        // with children that have scrolling containers.
-                        if (DEBUG) Log.v(TAG, "Starting unable to drag!");
-                        mIsUnableToDrag = true;
-                    }
-                }
-                break;
-            }
-
-            case MotionEvent.ACTION_DOWN: {
-                /*
-                 * Remember location of down touch.
-                 * ACTION_DOWN always refers to pointer index 0.
-                 */
-                mLastMotionX = mInitialMotionX = ev.getX();
-                mLastMotionY = ev.getY();
-                mActivePointerId = MotionEventCompat.getPointerId(ev, 0);
-
-                if (mScrollState == SCROLL_STATE_SETTLING) {
-                    // Let the user 'catch' the pager as it animates.
-                    mIsBeingDragged = true;
-                    mIsUnableToDrag = false;
-                    setScrollState(SCROLL_STATE_DRAGGING);
-                } else {
-                    completeScroll();
-                    mIsBeingDragged = false;
-                    mIsUnableToDrag = false;
-                }
-
-                if (DEBUG) Log.v(TAG, "Down at " + mLastMotionX + "," + mLastMotionY
-                        + " mIsBeingDragged=" + mIsBeingDragged
-                        + "mIsUnableToDrag=" + mIsUnableToDrag);
-                break;
-            }
-
-            case MotionEventCompat.ACTION_POINTER_UP:
-                onSecondaryPointerUp(ev);
-                break;
-        }
-
-        /*
-        * The only time we want to intercept motion events is if we are in the
-        * drag mode.
-        */
-        return mIsBeingDragged;
+        return false;
     }
-
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (mFakeDragging) {
@@ -1257,7 +1137,7 @@ public class LazyViewPager extends ViewGroup {
         if (needsInvalidate) {
             invalidate();
         }
-        return true;
+        return false;
     }
 
     @Override

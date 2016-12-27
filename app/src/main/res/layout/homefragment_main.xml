@@ -3,26 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff"
+    android:background="#F9F9F9"
     >
 <TextView
-    android:textColor="#f00"
-    android:textSize="20px"
+    android:textColor="#FC6B87"
+    android:textSize="32px"
     android:gravity="center"
+    android:background="#fff"
     android:text="御泥坊VIP商城"
     android:layout_width="match_parent"
-    android:layout_height="55px" />
+    android:layout_height="170px"
+    android:layout_weight="1" />
+<com.liaoinstan.springview.widget.SpringView
+    android:id="@+id/mySpringView"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:scrollbars="none"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-           <com.bwie.view.MyRoolViewPager
-               android:id="@+id/myRoolViewPager"
-               android:layout_width="match_parent"
-               android:layout_height="200px"/>
+
+            <com.bwie.view.MyRoolViewPager
+                android:background="#DCDCDC"
+                android:id="@+id/myRoolViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="550px"/>
             <LinearLayout
                 android:paddingRight="20dp"
                 android:layout_alignParentRight="true"
@@ -31,13 +41,142 @@
                 android:layout_alignBottom="@id/myRoolViewPager"
                 android:layout_width="wrap_content"
                 android:layout_height="40px"/>
-            <GridView
+            <com.bwie.view.MyGridView
+                android:listSelector="@android:color/transparent"
+                android:background="#fff"
                 android:numColumns="4"
-                android:layout_marginTop="10dp"
+                android:paddingTop="10dp"
                 android:id="@+id/home_grid1"
                 android:layout_below="@id/myRoolViewPager"
                 android:layout_width="match_parent"
-                android:layout_height="150px"/>
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:id="@+id/week_rel"
+                android:layout_below="@id/home_grid1"
+                android:background="#fff"
+                android:layout_marginTop="10px"
+                android:layout_width="match_parent"
+                android:layout_height="80px">
+                <TextView
+                    android:id="@+id/nowweek"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text=" 本周热销 "
+                    android:textColor="#646464"
+                    android:textSize="40px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70px"
+                    />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/nowweek"
+                    android:src="@mipmap/home_rank_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/nowweek"
+                    android:src="@mipmap/home_rank_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:background="#fff"
+                android:layout_below="@id/week_rel"
+                android:id="@+id/home_myRecycleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_below="@id/home_myRecycleView"
+                android:background="#fff"
+                android:id="@+id/youhui"
+                android:layout_marginTop="10px"
+                android:layout_width="match_parent"
+                android:layout_height="80px">
+                <TextView
+                    android:id="@+id/yy"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="—  优惠活动   —"
+                    android:textSize="40px"
+                    android:textColor="#646464"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70px"
+                    />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:background="#fff"
+                android:layout_below="@id/youhui"
+                android:layout_width="match_parent"
+                android:layout_height="620px"
+                android:clipChildren="false"
+                android:layout_centerInParent="true"
+                >
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/myViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="120px"
+                    android:layout_marginRight="120px"
+                    android:clipChildren="false"
+                    android:layout_height="420px"
+                    android:layout_gravity="center"
+                    >
+                </android.support.v4.view.ViewPager>
+            </FrameLayout>
+            <RelativeLayout
+                android:id="@+id/zhuanti"
+                android:layout_below="@id/frame"
+                android:background="#fff"
+                android:layout_marginTop="10px"
+                android:layout_width="match_parent"
+                android:layout_height="80px">
+                <TextView
+                    android:textSize="40px"
+                    android:id="@+id/hot"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="—   热门专题   —"
+                    android:textColor="#646464"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80px"
+                    />
+            </RelativeLayout>
+            <com.bwie.view.MyListView
+                android:id="@+id/myListView"
+                android:layout_below="@id/zhuanti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.bwie.view.MyGridView
+                android:listSelector="@android:color/transparent"
+                android:layout_marginTop="10px"
+                android:layout_below="@id/myListView"
+                android:id="@+id/myGridView"
+                android:numColumns="2"
+                android:padding="15px"
+                android:background="#fff"
+                android:verticalSpacing="10px"
+                android:horizontalSpacing="10px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/lookAll"
+                android:layout_below="@id/myGridView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#646464"
+                android:text="查看所有商品"
+                android:layout_marginBottom="20px"
+                android:layout_marginTop="20px"
+                android:textSize="30px"
+                android:layout_centerHorizontal="true"
+                />
         </RelativeLayout>
     </ScrollView>
+</com.liaoinstan.springview.widget.SpringView>
+
 </LinearLayout>

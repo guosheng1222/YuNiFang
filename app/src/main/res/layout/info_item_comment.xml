@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="10px"
+    android:layout_height="wrap_content">
+    <com.bwie.view.CircleImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_comment_icon"
+        android:layout_width="190px"
+        android:layout_height="190px"
+        android:src="@mipmap/user_icon_no_set"
+        />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="10px"
+                    android:id="@+id/item_comment_user"
+                    android:text="无你不为欢"
+                    android:textColor="#FC6B87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/item_comment_time"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="10px"
+                    android:text="2016年12月12日"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <TextView
+                android:textSize="40px"
+                android:layout_marginTop="30px"
+                android:layout_marginLeft="30px"
+                android:id="@+id/item_comment_content"
+                android:text="很好的一款面膜"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20px"
+                    android:id="@+id/item_comment_image1"
+                    android:layout_width="150px"
+                    android:layout_height="130px"
+                    />
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="20px"
+                    android:id="@+id/item_comment_image2"
+                    android:layout_width="230px"
+                    android:layout_height="130px"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:background="#A1A1A1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+</LinearLayout>

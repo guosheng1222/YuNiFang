@@ -4,38 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bwie.yunifang.LunchActivity">
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_lunch"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
     <ImageView
         android:id="@+id/iv_lunch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@mipmap/yunifang_lunch1" />
-
-    <ImageView
-        android:id="@+id/iv_lunch2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@mipmap/yunifang_lunch2"
-        android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/iv_lunch3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ico_next_guidance"
-        android:visibility="gone" />
-
-    <Button
-        android:id="@+id/bt_jump"
-        android:layout_width="60px"
-        android:layout_height="26px"
-        android:layout_alignParentRight="true"
-        android:layout_margin="15px"
-        android:background="#7d7b79"
-        android:visibility="gone" />
+        android:background="@mipmap/yunifang_lunch1" />
 </RelativeLayout>

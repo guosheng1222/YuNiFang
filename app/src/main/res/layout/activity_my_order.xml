@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#fff">
+        <ImageView
+            android:id="@+id/order_back"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="15px"
+            android:text="我的订单"
+            android:textColor="#000"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="退款订单"
+            android:layout_marginRight="20px"
+            android:textColor="#FC6B87"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+   <com.bwie.view.ViewPagerIndicator
+       android:id="@+id/order_vpIndicator"
+       android:layout_width="match_parent"
+       android:layout_height="100px"/>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/order_SpringView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/order_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.liaoinstan.springview.widget.SpringView>
+</LinearLayout>

@@ -22,6 +22,7 @@ import android.util.AttributeSet;
 import android.widget.ImageView;
 
 import com.bwie.yunifang.R;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 /**
  * Created by PC on 2016/11/30.
@@ -287,6 +288,9 @@ public class CircleImageView extends ImageView {
         initializeBitmap();
     }
 
+    public void setImageUrl(String url) {
+        ImageLoader.getInstance().displayImage(url,this);
+    }
     @Override
     public void setColorFilter(ColorFilter cf) {
         if (cf == mColorFilter) {

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/subject_title"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#fff"
+        android:paddingBottom="10px"
+        android:paddingTop="10px">
+        <ImageView
+            android:background="#fff"
+            android:id="@+id/subject_back"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:src="@drawable/selector_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="专题"
+            android:textSize="30px" />
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/subject_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/subject_bg"
+                android:background="@mipmap/subjects_detail_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/subject_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="9"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="50px"
+                android:text="hahahahhahahahhahahhahahhahahah"
+                />
+            <com.bwie.view.MyGridView
+                android:id="@+id/subject_myGridView"
+                android:numColumns="2"
+                android:layout_marginTop="10px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:background="#fff"
+                android:layout_below="@id/subject_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

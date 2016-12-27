@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.os.Process;
 
 import com.bwie.utils.ImageLoaderUtils;
+import com.umeng.socialize.PlatformConfig;
+import com.umeng.socialize.UMShareAPI;
+import com.zhy.autolayout.config.AutoLayoutConifg;
 
 import org.xutils.x;
 
@@ -21,6 +24,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AutoLayoutConifg.getInstance().useDeviceSize();
         //获取当前应用上下文
         context = getApplicationContext();
         handler = new Handler();
@@ -31,6 +35,10 @@ public class MyApplication extends Application {
         //xutils3初始化
         x.Ext.init(this);
         x.Ext.setDebug(true);
+        UMShareAPI.get(this);
+        // PlatformConfig.setWeixin("wx967daebe835fbeac", "5bb696d9ccd75a38c8a0bfe0675559b3");
+        //PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad");
+        PlatformConfig.setQQZone("100424468", "c7394704798a158208a74ab60104f0ba");
     }
     public static Handler getHandler() {
         return handler;

@@ -9,4 +9,12 @@
         android:src="@mipmap/ic_empty_page"
         android:layout_width="200px"
         android:layout_height="200px" />
+    <TextView
+        android:layout_marginTop="20px"
+        android:textColor="#000"
+        android:layout_below="@id/ic_empty"
+        android:layout_centerHorizontal="true"
+        android:text="点击图片返回"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

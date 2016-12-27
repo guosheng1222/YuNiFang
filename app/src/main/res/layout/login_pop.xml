@@ -9,12 +9,14 @@
         android:layout_marginTop="10px"
         android:layout_gravity="center_horizontal"
         android:text="第三方登录 >"
-        android:textSize="20px"
+        android:textSize="40px"
         android:textColor="#FC6B87"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
         android:layout_marginTop="10px"
+        android:textColor="#A1A1A1"
+        android:textSize="26px"
         android:layout_gravity="center_horizontal"
         android:text="第三方快速登录用户不享受任何御泥坊会员权益"
         android:layout_width="wrap_content"
@@ -22,23 +24,28 @@
         android:layout_marginBottom="10px"
         />
     <LinearLayout
+        android:paddingTop="10px"
+        android:layout_marginBottom="20px"
         android:layout_marginTop="10px"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="80px">
+        android:layout_height="210px">
         <ImageButton
+            android:id="@+id/login_qq"
             android:layout_weight="1"
             android:background="#fff"
             android:src="@drawable/selector_login_qq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageButton
+            android:id="@+id/login_sina"
             android:layout_weight="1"
             android:background="#fff"
             android:src="@drawable/selector_login_sina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <ImageButton
+            android:id="@+id/login_weixin"
             android:layout_weight="1"
             android:background="#fff"
             android:src="@drawable/selector_login_weixin"

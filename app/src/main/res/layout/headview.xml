@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100px"
+    android:layout_gravity="bottom"
+    >
+    <TextView
+        android:id="@+id/head_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="松手加载"
+        android:textColor="#000"
+        android:maxEms="10"
+        android:textSize="40px"
+        android:layout_marginLeft="10px"
+        android:layout_marginTop="30px"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id="@+id/head_image"
+        android:layout_marginTop="22px"
+        android:layout_toLeftOf="@id/head_text"
+        android:src="@drawable/default_ptr_rotate"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
